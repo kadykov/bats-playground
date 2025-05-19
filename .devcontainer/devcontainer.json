@@ -1,0 +1,31 @@
+{
+  "name": "bats",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    },
+    "ghcr.io/lukewiwa/features/shellcheck:0": {}
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "skellock.just",
+        "GitHub.vscode-github-actions",
+        "saoudrizwan.claude-dev",
+        "jetmartin.bats"
+      ]
+    }
+  },
+  "mounts": [
+    {
+      "source": "vscode-home",
+      "target": "/home/vscode",
+      "type": "volume"
+    }
+  ]
+}
